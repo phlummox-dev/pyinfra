@@ -2,10 +2,6 @@ name: Lint & Test
 
 on:
   push:
-    branches:
-      - 2.x
-      - 1.x
-      - 0.x
   pull_request:
 
 jobs:
