@@ -29,7 +29,7 @@ def test_int_docker_apk_on_alpine(helpers):
 @pytest.mark.end_to_end_docker
 def test_int_docker_apt_and_npm_on_ubuntu(helpers):
     helpers.run_check_output(
-        "pyinfra --chdir examples @docker/ubuntu:18.04 apt.py npm.py",
+        "pyinfra --chdir examples @docker/ubuntu:18.04 apt.py",
         expected_lines=["docker build complete"],
     )
 
