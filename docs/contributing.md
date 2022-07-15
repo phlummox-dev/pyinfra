@@ -34,6 +34,20 @@ pip install -e '.[dev]'
 
 Use `pytest` to run tests, or `pytest --cov` to run with coverage. Pull requests are expected to be tested and not drop overall project coverage by >1%.
 
+The `setup.cfg` file for `pyinfra` disables the "end-to-end" tests (contained in `tests/end-to-end/`) by default, but they can be run by providing
+pytests with a "mark expression":
+
+```
+# run end-to-end local tests
+pytest -m end_to_end_local
+
+# run end-to-end ssh tests
+pytest -m end_to_end_ssh
+
+# run end-to-end docker tests
+pytest -m end_to_end_docker
+```
+
 ## Generate Documentation
 
 To generate:
