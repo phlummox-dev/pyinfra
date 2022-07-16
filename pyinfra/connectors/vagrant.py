@@ -111,6 +111,8 @@ def _make_name_data(host):
         ("Port", "ssh_port"),
         ("User", "ssh_user"),
         ("IdentityFile", "ssh_key"),
+        ("UserKnownHostsFile", "ssh_known_hosts_file"),
+        ("StrictHostKeyChecking", "ssh_strict_host_key_checking"),
     ):
         if config_key in host:
             data[data_key] = host[config_key]
